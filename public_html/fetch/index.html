@@ -12,12 +12,10 @@
 async function func(){
   const input = document.querySelector('#inp');
   const inputLink = input.value; //присваиваем содержимое инпута в новую переменную
-  const inputHost = "https://cors-anywhere.herokuapp.com/";
- console.log("Inputlink = " + inputLink);
-  const response = await  fetch(inputHost + inputLink);
-  console.log("response = " + response);
+ 
+  const response = await fetch(inputLink);
   const rezult = await response.text(); // прочитать тело ответа как текст
- console.log("rezult = " + rezult);
+ 
   input.value = rezult;
 }
 </script>
